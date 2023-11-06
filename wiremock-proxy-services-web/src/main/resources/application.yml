@@ -1,0 +1,31 @@
+# Services URL
+
+## HttpStat.us
+serviceOne:
+  url: http://${wiremock.host}:${wiremock.port}
+  forwardServer: https://httpstat.us/
+  paths:
+    getInternalServerError: /500
+
+## echo-postman
+serviceTwo:
+  url: http://${wiremock.host}:${wiremock.port}
+  forwardServer: https://postman-echo.com/
+  paths:
+    postCustomData: /test
+
+
+# Wiremock server configuration
+wiremock:
+  enabled: true
+  host: localhost
+  port: 9090
+  stubMaps:
+    - name: serviceOne-get-mock
+      method: GET
+      urlPath: ${serviceOne.paths.getInternalServerError}
+      forwardServer: ${serviceOne.forwardServer}
+    - name: serviceTwo-post-mock
+      method: POST
+      urlPath: ${serviceTwo.paths.postCustomData}
+      forwardServer: ${serviceTwo.forwardServer}
