@@ -33,6 +33,7 @@
 		<spring-openfeign.version>4.0.4</spring-openfeign.version>
 		<spring-cloud.version>4.0.4</spring-cloud.version>
 		<spring-cloud-dependencies.version>2022.0.4</spring-cloud-dependencies.version>
+		<openapi.version>2.1.0</openapi.version>
 	</properties>
 
 	<dependencies>
@@ -67,9 +68,9 @@
 
 		<!-- swagger -->
 		<dependency>
-			<groupId>io.swagger.core.v3</groupId>
-			<artifactId>swagger-annotations</artifactId>
-			<version>2.2.15</version>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>${openapi.version}</version>
 		</dependency>
 		<!-- thirds party -->
 		<dependency>

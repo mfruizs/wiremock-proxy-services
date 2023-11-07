@@ -24,7 +24,7 @@ serviceOne:
   paths:
     getInternalServerError: /500
 
-## echo-postman
+## json-place-holder
 serviceTwo:
   name: service-two
   url: http://${wiremock.host}:${wiremock.port}
