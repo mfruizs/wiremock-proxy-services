@@ -6,8 +6,12 @@ import lombok.Data;
 @Data
 public class CustomRequestData {
 
-	@Schema(type = "String", example = "1")
-	private String id;
-	@Schema(type = "String", example = "test")
-	private String name;
+	@Schema(type = "String", example = "foo")
+	private String title;
+
+	@Schema(type = "String", example = "bar")
+	private String body;
+
+	@Schema(type = "int", example = "1")
+	private Integer userId;
 }

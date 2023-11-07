@@ -1,11 +1,17 @@
 {
 	"mappings": [
 		{
-			"name": "get rooms from crs for 12345",
+			"name": "change response for userID=1 on jsonplaceholder",
 			"priority": 1,
 			"request": {
 				"method": "POST",
-				"urlPath": "/api/test"
+				"urlPath": "/posts",
+				"bodyPatterns": [
+					{
+						"matchesJsonPath": "$.title",
+						"expectedValue": "foo"
+					}
+				]
 			},
 			"response": {
 				"status": 200,

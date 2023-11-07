@@ -28,9 +28,9 @@ serviceOne:
 serviceTwo:
   name: service-two
   url: http://${wiremock.host}:${wiremock.port}
-  forwardServer: https://postman-echo.com/
+  forwardServer: https://jsonplaceholder.typicode.com
   paths:
-    postCustomData: /test
+    postCustomData: /posts
 
 
 # Wiremock server configuration
