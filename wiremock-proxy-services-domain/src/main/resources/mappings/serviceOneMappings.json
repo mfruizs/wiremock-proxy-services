@@ -1,0 +1,19 @@
+{
+	"mappings": [
+		{
+			"name": "get status OK from 500",
+			"priority": 1,
+			"request": {
+				"urlPath": "/500",
+				"method": "GET"
+			},
+			"response": {
+				"status": 200,
+				"headers": {
+					"Content-Type": "application/json",
+					"Accept-Encoding": "gzip, deflate"
+				}
+			}
+		}
+	]
+}

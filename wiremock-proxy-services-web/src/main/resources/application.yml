@@ -1,4 +1,20 @@
 # Services URL
+spring:
+  main:
+    allow-bean-definition-overriding: true
+
+# Logging configuration
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          openfeign:
+            ribbon:
+              FeignLoadBalancer: DEBUG
+        web:
+          client:
+            RestTemplate: DEBUG
 
 ## HttpStat.us
 serviceOne:

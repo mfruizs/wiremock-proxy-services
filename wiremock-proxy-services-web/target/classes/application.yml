@@ -1,7 +1,24 @@
 # Services URL
+spring:
+  main:
+    allow-bean-definition-overriding: true
+
+# Logging configuration
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          openfeign:
+            ribbon:
+              FeignLoadBalancer: DEBUG
+        web:
+          client:
+            RestTemplate: DEBUG
 
 ## HttpStat.us
 serviceOne:
+  name: service-one
   url: http://${wiremock.host}:${wiremock.port}
   forwardServer: https://httpstat.us/
   paths:
@@ -9,6 +26,7 @@ serviceOne:
 
 ## echo-postman
 serviceTwo:
+  name: service-two
   url: http://${wiremock.host}:${wiremock.port}
   forwardServer: https://postman-echo.com/
   paths:
