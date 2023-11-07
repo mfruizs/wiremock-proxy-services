@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "e8347957-3a4a-4927-834c-7c0f3a23d33c",
+		"name": "wiremock_server_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31002378"
+	},
+	"item": [
+		{
+			"name": "wiremock_9090",
+			"item": [
+				{
+					"name": "refresh",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/__admin/mappings/reset",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"__admin",
+								"mappings",
+								"reset"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all mappings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/__admin/mappings",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"__admin",
+								"mappings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "test-httpstatus-500",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "test-jsonplaceholder-title",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"foo\",\n\t\"body\": \"bar\",\n\t\"userId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "external_Services",
+			"item": [
+				{
+					"name": "httpstatus-500",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://httpstat.us/500",
+							"protocol": "https",
+							"host": [
+								"httpstat",
+								"us"
+							],
+							"path": [
+								"500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jsonplaceholder-1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"foo\",\n\t\"body\": \"bar\",\n\t\"userId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/posts",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "httpStatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/test?codeStatus=500",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"test"
+					],
+					"query": [
+						{
+							"key": "codeStatus",
+							"value": "500"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jsonplaceholder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"foo\",\n\t\"body\": \"bar\",\n\t\"userId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/test",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://5d8bc3c7-5754-457f-9ec6-1db0a99d7bad.mock.pstmn.io"
+		}
+	]
+}
