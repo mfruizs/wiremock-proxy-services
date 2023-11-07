@@ -1,0 +1,31 @@
+## HttpStat.us
+serviceOne:
+  name: service-one
+  url: http://${wiremock.host}:${wiremock.port}
+  forwardServer: https://httpstat.us/
+  paths:
+    getInternalServerError: /{statusCode}
+
+## json-place-holder
+serviceTwo:
+  name: service-two
+  url: http://${wiremock.host}:${wiremock.port}
+  forwardServer: https://jsonplaceholder.typicode.com
+  paths:
+    postCustomData: /posts
+
+
+# Wiremock server configuration
+wiremock:
+  enabled: true
+  host: localhost
+  port: 9090
+  stubMaps:
+    - name: serviceOne-get-mock
+      method: GET
+      urlPath: ${serviceOne.paths.getInternalServerError}
+      forwardServer: ${serviceOne.forwardServer}
+    - name: serviceTwo-post-mock
+      method: POST
+      urlPath: ${serviceTwo.paths.postCustomData}
+      forwardServer: ${serviceTwo.forwardServer}
