@@ -24,7 +24,6 @@
 		<dependency>
 			<groupId>com.mfruizs</groupId>
 			<artifactId>wiremock-proxy-services-domain</artifactId>
-			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 

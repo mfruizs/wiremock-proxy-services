@@ -1,17 +1,19 @@
-package com.mfruiz.service.wiremock;
+package com.mfruizs.service.wiremock;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan("com.mfruizs")
 @ConfigurationPropertiesScan
-@EnableFeignClients(basePackages = "com.mfruiz.service")
-public class WiremockProxyServicesApplication {
+@EnableFeignClients(basePackages = "com.mfruizs.service")
+public class MainApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WiremockProxyServicesApplication.class, args);
+		SpringApplication.run(MainApplication.class, args);
 	}
 
 }

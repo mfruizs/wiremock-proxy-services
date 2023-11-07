@@ -1,6 +1,6 @@
-package com.mfruiz.service.configuration;
+package com.mfruizs.service.configuration;
 
-import com.mfruiz.service.feign.ServiceOneServiceFeign;
+import com.mfruizs.service.feign.ServiceOneServiceFeign;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Configuration;
 

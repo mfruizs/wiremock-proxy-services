@@ -1,8 +1,8 @@
-package com.mfruiz.service.wiremock;
+package com.mfruizs.service.wiremock;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
-import com.mfruiz.service.wiremock.business.WireMockAggregator;
-import com.mfruiz.service.wiremock.model.WiremockProperties;
+import com.mfruizs.service.wiremock.business.WireMockAggregator;
+import com.mfruizs.service.wiremock.model.WiremockProperties;
 import jakarta.annotation.PostConstruct;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

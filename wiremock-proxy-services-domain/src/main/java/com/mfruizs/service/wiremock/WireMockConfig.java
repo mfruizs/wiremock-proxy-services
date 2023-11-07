@@ -1,10 +1,10 @@
-package com.mfruiz.service.wiremock;
+package com.mfruizs.service.wiremock;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.common.ClasspathFileSource;
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
 import com.github.tomakehurst.wiremock.standalone.JsonFileMappingsSource;
-import com.mfruiz.service.wiremock.model.WiremockProperties;
+import com.mfruizs.service.wiremock.model.WiremockProperties;
 import java.nio.file.Path;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

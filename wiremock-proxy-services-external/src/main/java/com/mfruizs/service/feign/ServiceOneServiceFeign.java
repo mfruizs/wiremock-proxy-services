@@ -1,9 +1,10 @@
-package com.mfruiz.service.feign;
+package com.mfruizs.service.feign;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 @FeignClient(
 	name = "${serviceOne.name}",
@@ -15,6 +16,6 @@ public interface ServiceOneServiceFeign {
 	@GetMapping(path = "${core.paths.getInternalServerError}",
 		consumes = MediaType.APPLICATION_JSON_VALUE,
 		produces = MediaType.APPLICATION_JSON_VALUE)
-	void getInternalServerErrorResponseStatus(@RequestParam(value = "statusCode") final String statusCode);
+	ResponseStatus getInternalServerErrorResponseStatus(@RequestParam(value = "statusCode") final String statusCode);
 
 }

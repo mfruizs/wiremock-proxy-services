@@ -21,17 +21,27 @@
 	</properties>
 
 	<dependencies>
+		<!-- module -->
+		<dependency>
+			<groupId>com.mfruizs</groupId>
+			<artifactId>wiremock-proxy-services-external</artifactId>
+		</dependency>
+
+		<!-- Wiremock -->
 		<dependency>
 			<groupId>org.wiremock</groupId>
 			<artifactId>wiremock-standalone</artifactId>
 			<version>${wiremock.version}</version>
 			<scope>compile</scope>
 		</dependency>
+
+		<!-- utils -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>${commons-lang3.version}</version>
 		</dependency>
+
 	</dependencies>
 
 </project>

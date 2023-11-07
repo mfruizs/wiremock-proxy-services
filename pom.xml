@@ -26,6 +26,7 @@
 	</modules>
 
 	<properties>
+		<start-class>com.mfruizs.service.wiremock.MainApplication</start-class>
 		<java.version>17</java.version>
 		<spring-openfeign.version>4.0.3</spring-openfeign.version>
 		<feign-core.version>12.4</feign-core.version>
@@ -47,12 +48,12 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- Feign -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 			<version>${spring-cloud.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-openfeign-core</artifactId>
@@ -64,7 +65,12 @@
 			<version>${feign-core.version}</version>
 		</dependency>
 
-
+		<!-- swagger -->
+		<dependency>
+			<groupId>io.swagger.core.v3</groupId>
+			<artifactId>swagger-annotations</artifactId>
+			<version>2.2.15</version>
+		</dependency>
 		<!-- thirds party -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>

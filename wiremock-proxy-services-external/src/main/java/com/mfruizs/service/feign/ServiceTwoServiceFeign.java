@@ -1,7 +1,7 @@
-package com.mfruiz.service.feign;
+package com.mfruizs.service.feign;
 
-import com.mfruiz.service.model.CustomRequestData;
-import com.mfruiz.service.model.CustomResponseData;
+import com.mfruizs.service.model.CustomRequestData;
+import com.mfruizs.service.model.CustomResponseData;
 import java.util.List;
 import java.util.Map;
 import org.springframework.cloud.openfeign.FeignClient;

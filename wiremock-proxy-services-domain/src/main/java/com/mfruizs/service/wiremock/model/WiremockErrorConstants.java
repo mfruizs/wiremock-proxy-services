@@ -1,4 +1,4 @@
-package com.mfruiz.service.wiremock.model;
+package com.mfruizs.service.wiremock.model;
 
 import lombok.experimental.UtilityClass;
 
