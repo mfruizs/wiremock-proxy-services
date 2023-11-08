@@ -35,8 +35,5 @@ build/
 # Mac
 .DS_Store
 
-# Maven
-target/
-
 # NPM
 node_modules/
