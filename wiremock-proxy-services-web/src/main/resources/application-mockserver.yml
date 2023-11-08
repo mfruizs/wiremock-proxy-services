@@ -1,18 +1,12 @@
 ## HttpStat.us
 serviceOne:
-  name: service-one
   url: http://${wiremock.host}:${wiremock.port}
-  forwardServer: https://httpstat.us/
-  paths:
-    getInternalServerError: /{statusCode}
+  forwardServer: https://httpstat.us
 
 ## json-place-holder
 serviceTwo:
-  name: service-two
   url: http://${wiremock.host}:${wiremock.port}
   forwardServer: https://jsonplaceholder.typicode.com
-  paths:
-    postCustomData: /posts
 
 
 # Wiremock server configuration

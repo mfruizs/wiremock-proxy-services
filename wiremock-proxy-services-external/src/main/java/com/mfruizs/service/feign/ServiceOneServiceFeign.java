@@ -16,6 +16,6 @@ public interface ServiceOneServiceFeign {
 	@GetMapping(path = "/{statusCode}",
 		consumes = MediaType.APPLICATION_JSON_VALUE,
 		produces = MediaType.APPLICATION_JSON_VALUE)
-	ResponseEntity<String> getInternalServerErrorResponseStatus(@PathVariable(value = "statusCode") final String statusCode);
+	ResponseEntity<String> getResponse(@PathVariable(value = "statusCode") final String statusCode);
 
 }

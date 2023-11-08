@@ -2,8 +2,6 @@ package com.mfruizs.service.feign;
 
 import com.mfruizs.service.model.CustomRequestData;
 import com.mfruizs.service.model.CustomResponseData;
-import java.util.List;
-import java.util.Map;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,5 +17,5 @@ public interface ServiceTwoServiceFeign {
 	@PostMapping(path = "${serviceTwo.paths.postCustomData}",
 		consumes = MediaType.APPLICATION_JSON_VALUE,
 		produces = MediaType.APPLICATION_JSON_VALUE)
-	CustomResponseData postTestData(@RequestBody final CustomRequestData customRequestData);
+	CustomResponseData getResponse(@RequestBody final CustomRequestData customRequestData);
 }

@@ -3,12 +3,13 @@ spring:
   main:
     allow-bean-definition-overriding: true
   profiles:
-    active: ${env.PROFILE:local, mockserver}
+    active: ${env.PROFILE:mockserver}
 
 # Logging configuration
 logging:
   level:
     org:
+      mfruizs: DEBUG
       springframework:
         cloud:
           openfeign:
@@ -23,7 +24,7 @@ serviceOne:
   name: service-one
   url: https://httpstat.us/
   paths:
-    getInternalServerError: /{statusCode}
+    getInternalServerError: /([0-9]*)
 
 ## json-place-holder
 serviceTwo:

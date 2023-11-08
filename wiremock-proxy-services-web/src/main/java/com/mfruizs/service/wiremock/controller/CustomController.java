@@ -25,16 +25,16 @@ public class CustomController {
 	private final CustomService customService;
 
 	@GetMapping
-	public ResponseEntity<String> recoverResponseFromHttpStatusExternalService(@RequestParam String codeStatus) {
+	public ResponseEntity<String> recoverResponseFromServiceOne(@RequestParam String codeStatus) {
 
-		String response = customService.recoverResponseFromHttpStatusExternalService(codeStatus);
+		String response = customService.recoverResponseFromServiceOne(codeStatus);
 		return new ResponseEntity<>(response, HttpStatus.OK);
 	}
 
 	@PostMapping
-	public ResponseEntity<CustomResponseData> recoverResponseFromEchoPostmanExternalService(@RequestBody CustomRequestData customRequestData) {
+	public ResponseEntity<CustomResponseData> recoverResponseFromServiceTwo(@RequestBody CustomRequestData customRequestData) {
 
-		CustomResponseData response = customService.recoverResponseFromEchoPostmanExternalService(customRequestData);
+		CustomResponseData response = customService.recoverResponseFromServiceTwo(customRequestData);
 		return new ResponseEntity<>(response, HttpStatus.OK);
 	}
 

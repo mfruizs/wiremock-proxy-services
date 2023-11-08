@@ -16,16 +16,16 @@ public class CustomService {
 	private final ServiceOneServiceFeign serviceOneServiceFeign;
 	private final ServiceTwoServiceFeign serviceTwoServiceFeign;
 
-	public String recoverResponseFromHttpStatusExternalService(String codeStatus) {
+	public String recoverResponseFromServiceOne(String codeStatus) {
 
-		ResponseEntity<String> response = serviceOneServiceFeign.getInternalServerErrorResponseStatus(codeStatus);
+		ResponseEntity<String> response = serviceOneServiceFeign.getResponse(codeStatus);
 		HttpStatusCode status = response.getStatusCode();
 		return status.toString();
 	}
 
-	public CustomResponseData recoverResponseFromEchoPostmanExternalService(CustomRequestData customRequestData) {
+	public CustomResponseData recoverResponseFromServiceTwo(CustomRequestData customRequestData) {
 
-		return serviceTwoServiceFeign.postTestData(customRequestData);
+		return serviceTwoServiceFeign.getResponse(customRequestData);
 	}
 
 
