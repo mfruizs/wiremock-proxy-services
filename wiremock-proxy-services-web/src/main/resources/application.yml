@@ -24,14 +24,14 @@ serviceOne:
   name: service-one
   url: https://httpstat.us/
   paths:
-    getInternalServerError: /([0-9]*)
+    path: /([0-9]*)
 
 ## json-place-holder
 serviceTwo:
   name: service-two
   url: https://jsonplaceholder.typicode.com
   paths:
-    postCustomData: /posts
+    path: /posts
 
 # Wiremock server configuration
 wiremock:

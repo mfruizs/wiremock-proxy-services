@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(
 	name = "${serviceOne.name}",
-	url = "${serviceOne.url}",
-	dismiss404 = true
+	url = "${serviceOne.url}"
 )
 public interface ServiceOneServiceFeign {
 

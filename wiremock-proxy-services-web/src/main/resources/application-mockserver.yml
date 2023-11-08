@@ -17,9 +17,9 @@ wiremock:
   stubMaps:
     - name: serviceOne-get-mock
       method: GET
-      urlPath: ${serviceOne.paths.getInternalServerError}
+      urlPath: ${serviceOne.paths.path}
       forwardServer: ${serviceOne.forwardServer}
     - name: serviceTwo-post-mock
       method: POST
-      urlPath: ${serviceTwo.paths.postCustomData}
+      urlPath: ${serviceTwo.paths.path}
       forwardServer: ${serviceTwo.forwardServer}
