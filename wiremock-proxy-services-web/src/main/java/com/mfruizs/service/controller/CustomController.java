@@ -1,4 +1,4 @@
-package com.mfruizs.service.wiremock.controller;
+package com.mfruizs.service.controller;
 
 import com.mfruizs.service.model.CustomRequestData;
 import com.mfruizs.service.model.CustomResponseData;

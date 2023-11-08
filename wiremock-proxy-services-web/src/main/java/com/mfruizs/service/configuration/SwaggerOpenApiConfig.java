@@ -1,4 +1,4 @@
-package com.mfruizs.service.wiremock.configuration;
+package com.mfruizs.service.configuration;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.models.Components;
