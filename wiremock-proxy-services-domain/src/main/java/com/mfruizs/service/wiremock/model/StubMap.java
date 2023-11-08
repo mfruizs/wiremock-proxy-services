@@ -6,6 +6,7 @@ import static com.github.tomakehurst.wiremock.client.WireMock.patch;
 import static com.github.tomakehurst.wiremock.client.WireMock.post;
 import static com.github.tomakehurst.wiremock.client.WireMock.put;
 import static com.github.tomakehurst.wiremock.client.WireMock.urlPathEqualTo;
+import static com.github.tomakehurst.wiremock.client.WireMock.urlPathMatching;
 import static com.mfruizs.service.wiremock.model.WiremockErrorConstants.ERROR_INCORRECT_STUB_MAP_CONFIGURE_METHOD;
 import static java.util.Objects.isNull;
 import static org.apache.commons.lang3.StringUtils.isBlank;
@@ -32,11 +33,11 @@ public class StubMap {
 		}
 
 		return switch (this.method) {
-			case GET -> get(urlPathEqualTo(this.urlPath));
-			case POST -> post(urlPathEqualTo(this.urlPath));
-			case PUT -> put(urlPathEqualTo(this.urlPath));
-			case DELETE -> delete(urlPathEqualTo(this.urlPath));
-			case PATCH -> patch(urlPathEqualTo(this.urlPath));
+			case GET -> get(urlPathMatching(this.urlPath));
+			case POST -> post(urlPathMatching(this.urlPath));
+			case PUT -> put(urlPathMatching(this.urlPath));
+			case DELETE -> delete(urlPathMatching(this.urlPath));
+			case PATCH -> patch(urlPathMatching(this.urlPath));
 			default -> throw createWiremockException("Unexpected value: " + this.method);
 		};
 
