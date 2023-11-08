@@ -1,7 +1,7 @@
-package com.mfruizs.service.feign;
+package com.mfruizs.example.feign;
 
-import com.mfruizs.service.model.CustomRequestData;
-import com.mfruizs.service.model.CustomResponseData;
+import com.mfruizs.example.model.CustomRequestData;
+import com.mfruizs.example.model.CustomResponseData;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;

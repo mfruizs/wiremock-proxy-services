@@ -1,8 +1,8 @@
-package com.mfruizs.service.controller;
+package com.mfruizs.example.controller;
 
-import com.mfruizs.service.model.CustomRequestData;
-import com.mfruizs.service.model.CustomResponseData;
-import com.mfruizs.service.services.CustomService;
+import com.mfruizs.example.model.CustomRequestData;
+import com.mfruizs.example.model.CustomResponseData;
+import com.mfruizs.example.services.CustomService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.cloud.context.config.annotation.RefreshScope;

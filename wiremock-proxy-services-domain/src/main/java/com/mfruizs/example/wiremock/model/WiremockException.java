@@ -1,4 +1,4 @@
-package com.mfruizs.service.wiremock.model;
+package com.mfruizs.example.wiremock.model;
 
 import lombok.Builder;
 import org.springframework.http.HttpStatus;

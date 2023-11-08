@@ -1,10 +1,15 @@
-package com.mfruizs.service.model;
+package com.mfruizs.example.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 @Data
-public class CustomRequestData {
+@JsonIgnoreProperties
+public class CustomResponseData {
+
+	@Schema(type = "int", example = "101")
+	private Integer id;
 
 	@Schema(type = "String", example = "foo")
 	private String title;

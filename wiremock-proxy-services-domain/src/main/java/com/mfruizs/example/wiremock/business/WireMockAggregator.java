@@ -1,12 +1,12 @@
-package com.mfruizs.service.wiremock.business;
+package com.mfruizs.example.wiremock.business;
 
-import static com.mfruizs.service.wiremock.model.WiremockErrorConstants.ERROR_INCORRECT_STUB_MAP_CONFIGURE_METHOD;
+import static com.mfruizs.example.wiremock.model.WiremockErrorConstants.ERROR_INCORRECT_STUB_MAP_CONFIGURE_METHOD;
 
 import com.github.tomakehurst.wiremock.client.WireMock;
 import com.github.tomakehurst.wiremock.http.RequestListener;
 import com.github.tomakehurst.wiremock.stubbing.StubMapping;
-import com.mfruizs.service.wiremock.model.StubMap;
-import com.mfruizs.service.wiremock.model.WiremockException;
+import com.mfruizs.example.wiremock.model.StubMap;
+import com.mfruizs.example.wiremock.model.WiremockException;
 import java.util.Objects;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

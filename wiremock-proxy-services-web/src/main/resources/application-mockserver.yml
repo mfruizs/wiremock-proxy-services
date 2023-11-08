@@ -12,14 +12,15 @@ serviceTwo:
 # Wiremock server configuration
 wiremock:
   enabled: true
+  mapping: /wiremock-proxy-services-domain/src/main/resources
   host: localhost
   port: 9090
   stubMaps:
     - name: serviceOne-get-mock
       method: GET
-      urlPath: ${serviceOne.paths.path}
+      urlPath: ${serviceOne.paths.urlPath}
       forwardServer: ${serviceOne.forwardServer}
     - name: serviceTwo-post-mock
       method: POST
-      urlPath: ${serviceTwo.paths.path}
+      urlPath: ${serviceTwo.paths.urlPath}
       forwardServer: ${serviceTwo.forwardServer}

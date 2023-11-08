@@ -1,4 +1,4 @@
-package com.mfruizs.service;
+package com.mfruizs.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ComponentScan("com.mfruizs")
 @ConfigurationPropertiesScan
-@EnableFeignClients(basePackages = "com.mfruizs.service")
+@EnableFeignClients(basePackages = "com.mfruizs.example")
 public class MainApplication {
 
 	public static void main(String[] args) {

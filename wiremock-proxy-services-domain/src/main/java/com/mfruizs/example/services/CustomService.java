@@ -1,9 +1,9 @@
-package com.mfruizs.service.services;
+package com.mfruizs.example.services;
 
-import com.mfruizs.service.feign.ServiceOneServiceFeign;
-import com.mfruizs.service.feign.ServiceTwoServiceFeign;
-import com.mfruizs.service.model.CustomRequestData;
-import com.mfruizs.service.model.CustomResponseData;
+import com.mfruizs.example.feign.ServiceOneServiceFeign;
+import com.mfruizs.example.feign.ServiceTwoServiceFeign;
+import com.mfruizs.example.model.CustomRequestData;
+import com.mfruizs.example.model.CustomResponseData;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
@@ -27,6 +27,5 @@ public class CustomService {
 
 		return serviceTwoServiceFeign.getResponse(customRequestData);
 	}
-
 
 }

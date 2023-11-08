@@ -1,4 +1,4 @@
-package com.mfruizs.service.wiremock.model;
+package com.mfruizs.example.wiremock.model;
 
 import java.util.List;
 import lombok.Data;

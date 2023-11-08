@@ -1,4 +1,4 @@
-package com.mfruizs.service.feign;
+package com.mfruizs.example.feign;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(
 	name = "${serviceOne.name}",
-	url = "${serviceOne.url}"
+	url = "${serviceOne.url}",
+	dismiss404 = true
 )
 public interface ServiceOneServiceFeign {
 
