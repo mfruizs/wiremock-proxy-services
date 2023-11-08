@@ -31,3 +31,12 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Mac
+.DS_Store
+
+# Maven
+target/
+
+# NPM
+node_modules/
